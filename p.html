@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="stdform">
+        <label for="fname">FirstName</label>
+        <input type="text" name="" id="fname">
+        <button>submit</button>
+        <div id="users">
+
+        </div>
+    </form>
+    <script>
+        let form=document.getElementById('stdform');
+        let fname=document.getElementById('fname');
+        let user=document.getElementById('users')
+        form.addEventListener('click',(event)=>{
+            event.preventDefault();
+            let user1=document.createElement('div');
+            user1.textContent=fname.value;
+            user.appendChild(user1);
+            console.log(fname.value);
+            form.reset()
+        })
+    </script>
+</body>
+</html>
